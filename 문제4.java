@@ -1,23 +1,20 @@
-package basic.exam;
+package basic.myPagage;
 
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class 문제4 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("값을 입력하세요 : ");
-        int inputValue = scanner.nextInt();
-        int sumValue = 0;
-        for (int i = 1; i <= inputValue; i++) {
-            for (int j = 1; j <= i; j++) {
-                sumValue = sumValue + j;
+        int[] a = {9, 8, 2, 4, 3};
+        int tempValue;
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a.length - i - 1; j++) {
+                if (a[j] > a[j + 1]) {
+                    tempValue = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = tempValue;
+                }
             }
-
         }
-        System.out.println("결과 :" +sumValue);
-
-
-        }
-
+        System.out.println(Arrays.toString(a));
     }
-
+}

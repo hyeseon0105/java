@@ -1,20 +1,22 @@
-package basic.exam;
+package basic.myPagage;
+
+import java.util.Arrays;
 
 public class 문제5 {
     public static void main(String[] args) {
-        int Money = 3780;
-        System.out.println("1000원 : " + Money / + 1000 + "개");
-        Money = Money % 1000;
-        System.out.println("500원 : " + Money / + 500 + "개");
-        System.out.println("남은금액 : "+ Money % + 500 + "원");
-        Money = Money % 500;
-        System.out.println("100원 : "+ Money/ + 100 + "개");
-        System.out.println("남은금액 : "+ Money % + 100 + "원");
-        Money = Money % 100;
-        System.out.println("10원 : "+Money / + 10 + "개");
-        System.out.println("남은금액 : "+ Money % + 10 + "원");
+        int[] a = {9, 8, 2, 4, 3};
+        int tempValue, tatget;
+        for (int i = 0; i < a.length; i++) {
+            tempValue = a[i];
+            tatget = i - 1;
+            while (tatget >= 0 && a[tatget] > tempValue) {
+                a[tatget + 1] = a[tatget];
+                tatget--;
 
-
+            }
+            a[tatget + 1] = tempValue;
+        }
+        System.out.println(Arrays.toString(a));
 
     }
 }

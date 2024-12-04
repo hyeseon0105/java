@@ -1,14 +1,25 @@
-package basic.exam;
+package basic.myPagage;
+
+import java.util.Arrays;
 
 public class 문제3 {
     public static void main(String[] args) {
-        for (int i = 1; i < 21; i = i +1) {
-            if (i % 2 == 0) {
-                System.out.println("i=" + i);
+        int[] a = {4, 1, 2, 5, 3};
+        int tempvalue, tempj = 0;
+        for (int i = 0; i < a.length; i++) {
+            int min = Integer.MAX_VALUE;
+            for (int j = i; j < a.length; j++) {
+                if (a[j] < min) {
+                    min = a[j];
+                    tempj = j;
+                }
             }
-            for (int j = 2; j <= 20; j = j + 2) {
-            }
-            }
-        }
-    }
+            tempvalue = a[i];
+            a[i] = a[tempj];
+            a[tempj] = tempvalue;
 
+        }
+        System.out.println(Arrays.toString(a));
+
+    }
+}
