@@ -18,6 +18,17 @@ public class 문제13 {
             System.out.println(a + (hour + "" + (sum - (hour * 60))));
         }
 
+        Scanner sc = new Scanner(System.in);
+        System.out.println("현재시간 : ");
+        int hh = sc.nextInt();
+        System.out.println("현재 분 : ");
+        int mm = sc.nextInt();
+        System.out.println("요리시간 : ");
+        int time = sc.nextInt();
+        int totalTime = (hh * 60) + mm + time;
 
+        hh = (totalTime / 60)%24;
+        mm = totalTime % 60;
+        System.out.println(hh+" "+mm);
     }
 }
