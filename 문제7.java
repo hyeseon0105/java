@@ -1,21 +1,28 @@
-package basic.myPagage;
+package basic.exam;
 
 public class 문제7 {
     public static void main(String[] args) {
-        int[] Lotto = new int[6];
-        System.out.println("Lotto 선택 숫자는 ");
-        for (int i = 0; i < Lotto.length; i++) {
-            Lotto[i] = (int) (Math.random() * 45) + 1;
-            for (int j = 0; j < i; j++) {
-                if (Lotto[i] == Lotto[j]) {
-                    i--;
-                    break;
-                }
-            }
-            }
-        for (int i = 0; i < Lotto.length; i++) {
-            System.out.println(Lotto[i]+"");
-            System.out.println("입니다. ");
+        int intA = 0;
+        int intB = 0;
+        intA = intA + 2;
+        intB = intB + intA;
+        intA = intA + 1;
+        intB = intB + intA;
+        intA = intA + 1;
+        intB = intB + intA;
+        intA = intA + 1;
+        intB = intB + intA;
+        intA = intA + 1;
+        intB = intB + intA;
+        intA = intA + 1;
+        intB = intB + intA;
+
+        System.out.println(intB);
+
+        intB = 0;
+        for (int i = 2; i <= 7 ; i ++) {
+            intB = intB + i;
         }
+        System.out.println(intB);
     }
 }

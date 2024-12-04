@@ -1,17 +1,21 @@
-package basic.myPagage;
+package basic.exam;
 
 public class 문제2 {
     public static void main(String[] args) {
-        int[] dice = new int[11];
-        for (int i = 0; i < dice.length; i++) {
-            int dice_1 = 0;
-            int dice_2 = 0;
-            dice[dice_1 + dice_2]++;
-
-            dice_1= (int) Math.random() * 6 + 1;
-            dice_2 = (int) Math.random() * 6 + 1;
+        for (int i = 10; i >= 1; i--) {
+            if (i == 3) continue;
+            System.out.println(i);
         }
+        int j = 11;
+        do {
+            j--;
+            if (j == 3) {
+                continue;
+            } else {
+                System.out.println(j);
 
-                 
+            }
+        } while (j > 0) ;
+
     }
 }
