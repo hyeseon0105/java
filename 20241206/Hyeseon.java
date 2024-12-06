@@ -25,6 +25,12 @@ public class Hyeseon {
             Scanner scanner = new Scanner(System.in);
 
             System.out.println("돈을 넣어주세요.");
+            int angle = scanner.nextInt();
+
+            if (angle == 1004) {
+                System.out.println("관리자 페이지 입니다.");
+                System.out.println("1.메뉴변경 "+ "2.가격변경 "+ "3.메뉴추가 "+ "4.메뉴추가"+ "수익확인 (종료는 -1)");
+                System.out.println("번호를 입력하세요. ");
             int money = scanner.nextInt();
             System.out.println(money+"원");
             System.out.println("메뉴입력 : ");
@@ -42,6 +48,8 @@ public class Hyeseon {
             if (numm== 3) {
                 System.out.println("거스름돈 : " +(money+ - price[num])+"원이 반환됩니다." );
                 System.out.println("감사합니다 다음에 또 이용해주세요!!!");
+            }
+
             }
         }
     }
